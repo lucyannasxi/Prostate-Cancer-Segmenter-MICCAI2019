@@ -79,3 +79,13 @@ class Gleason2019(Dataset):
     def crop_img(self, img_numpy, label_numpy):
         h_crop, w_crop = self.generate_patch(img_numpy)
         img_numpy = img_numpy[h_crop:(h_crop + self.crop_dim[0]),
+                    w_crop:(w_crop + self.crop_dim[1]), :]
+        label_numpy = label_numpy[h_crop:(h_crop + self.crop_dim[0]),
+                      w_crop:(w_crop + self.crop_dim[1])]
+        return img_numpy, label_numpy
+
+
+class Gleason2019SaveDISK(Dataset):
+    """
+    Code for reading Gleason 2019 MICCAI Challenge
+    """
