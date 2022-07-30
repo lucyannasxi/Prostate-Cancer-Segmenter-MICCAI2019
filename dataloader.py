@@ -66,3 +66,16 @@ class Gleason2019(Dataset):
                 img_tensor = img_tensor.permute(2, 0, 1)
                 img_tensor = norm_img(img_tensor)
                 self.sample_list.append(tuple((img_tensor, label_tensor)))
+
+    def generate_patch(self, img):
+        h, w, c = img.shape
+        if h < self.crop_dim[0] or w < self.crop_dim[1]:
+            print('dim error')
+            print(h, self.crop_dim[0], w, self.crop_dim[1])
+        h_crop = np.random.randint(h - self.crop_dim[0])
+        w_crop = np.random.randint(w - self.crop_dim[1])
+        return h_crop, w_crop
+
+    def crop_img(self, img_numpy, label_numpy):
+        h_crop, w_crop = self.generate_patch(img_numpy)
+        img_numpy = img_numpy[h_crop:(h_crop + self.crop_dim[0]),
