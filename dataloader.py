@@ -33,3 +33,13 @@ class Gleason2019(Dataset):
         if self.mode == 'train':
             self.list_imgs = image_paths[0:train_idx]
             self.list_labels = label_paths[0:train_idx]
+            self.generate_samples()
+        elif self.mode == 'val':
+            self.list_imgs = image_paths[train_idx:(train_idx + val_idx)]
+            self.list_labels = label_paths[train_idx:(train_idx + val_idx)]
+            self.generate_samples()
+
+    def __len__(self):
+        return len(self.sample_list)
+
+    def __getitem__(self, index):
