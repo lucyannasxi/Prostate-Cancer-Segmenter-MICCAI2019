@@ -43,3 +43,14 @@ class Gleason2019(Dataset):
         return len(self.sample_list)
 
     def __getitem__(self, index):
+        tuple_in = self.sample_list[index]
+        img_tensor, segmentation_map = tuple_in
+        return img_tensor, segmentation_map
+
+    def generate_samples(self):
+        total = len(self.list_imgs)
+        print('Total ' + self.mode + ' data to generate samples:', total)
+        for j in range(total):
+            for i in range(self.samples):
+                input_path = self.list_imgs[j]
+                label_path = self.list_labels[j]
