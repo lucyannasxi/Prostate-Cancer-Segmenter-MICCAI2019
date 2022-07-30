@@ -23,3 +23,13 @@ class Gleason2019(Dataset):
         :param samples: number of sub-grids to create(patches of the input img)
         """
         self.slices = 244
+        self.mode = mode
+        self.crop_dim = crop_dim
+        self.sample_list = []
+        self.samples = samples
+        train_idx = int(split[0] * self.slices)
+        val_idx = int(split[1] * self.slices)
+
+        if self.mode == 'train':
+            self.list_imgs = image_paths[0:train_idx]
+            self.list_labels = label_paths[0:train_idx]
