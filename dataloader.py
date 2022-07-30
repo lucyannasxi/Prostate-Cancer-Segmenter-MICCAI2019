@@ -18,3 +18,8 @@ class Gleason2019(Dataset):
         """
         :param mode: 'train','val'
         :param image_paths: image dataset paths
+        :param label_paths: label dataset paths
+        :param crop_dim: 2 element tuple to decide crop values
+        :param samples: number of sub-grids to create(patches of the input img)
+        """
+        self.slices = 244
