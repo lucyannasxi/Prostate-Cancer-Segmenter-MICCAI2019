@@ -107,3 +107,13 @@ class Gleason2019SaveDISK(Dataset):
         self.val_idx = int(split[1] * self.slices)
         self.image_paths = image_paths
         self.label_paths = label_paths
+
+    def generate_data(self, path):
+        make_dirs(path)
+        sample_img_path = os.path.join(path, 'sample_imgs')
+        sample_seg_path = os.path.join(path, 'sample_seg')
+
+        make_dirs(sample_img_path)
+        make_dirs(sample_seg_path)
+
+        if self.mode == 'train':
