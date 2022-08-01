@@ -117,3 +117,16 @@ class Gleason2019SaveDISK(Dataset):
         make_dirs(sample_seg_path)
 
         if self.mode == 'train':
+            self.list_imgs = self.image_paths[0:self.train_idx]
+            self.list_labels = self.label_paths[0:self.train_idx]
+            self._generate_samples(sample_img_path, sample_seg_path)
+        elif self.mode == 'val':
+            self.list_imgs = self.image_paths[self.train_idx:(self.train_idx + self.val_idx)]
+            self.list_labels = self.label_paths[self.train_idx:(self.train_idx + self.val_idx)]
+            self._generate_samples(sample_img_path, sample_seg_path)
+
+    def __len__(self):
+        return len(self.sample_list)
+
+    def __getitem__(self, index):
+        out_img_file, out_seg_file = self.sample_list[index]
