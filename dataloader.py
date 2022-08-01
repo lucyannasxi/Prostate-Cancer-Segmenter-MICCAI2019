@@ -89,3 +89,12 @@ class Gleason2019SaveDISK(Dataset):
     """
     Code for reading Gleason 2019 MICCAI Challenge
     """
+
+    def __init__(self, mode, image_paths, label_paths, split=(0.8, 0.2), crop_dim=(512, 512), samples=100):
+        """
+        :param mode: 'train','val'
+        :param image_paths: image dataset paths
+        :param label_paths: label dataset paths
+        :param crop_dim: 2 element tuple to decide crop values
+        :param samples: number of sub-grids to create(patches of the input img)
+        """
