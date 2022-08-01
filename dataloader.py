@@ -98,3 +98,12 @@ class Gleason2019SaveDISK(Dataset):
         :param crop_dim: 2 element tuple to decide crop values
         :param samples: number of sub-grids to create(patches of the input img)
         """
+        self.slices = 244
+        self.mode = mode
+        self.crop_dim = crop_dim
+        self.sample_list = []
+        self.samples = samples
+        self.train_idx = int(split[0] * self.slices)
+        self.val_idx = int(split[1] * self.slices)
+        self.image_paths = image_paths
+        self.label_paths = label_paths
