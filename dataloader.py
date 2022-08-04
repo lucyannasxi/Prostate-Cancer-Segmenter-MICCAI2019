@@ -181,3 +181,13 @@ class Gleason2019SaveDISK(Dataset):
     def crop_img(self, img_numpy, label_numpy):
         h_crop, w_crop = self.generate_patch(img_numpy)
         img_numpy = img_numpy[h_crop:(h_crop + self.crop_dim[0]),
+                    w_crop:(w_crop + self.crop_dim[1]), :]
+        label_numpy = label_numpy[h_crop:(h_crop + self.crop_dim[0]),
+                      w_crop:(w_crop + self.crop_dim[1])]
+        return img_numpy, label_numpy
+
+
+def norm_img(img_tensor):
+    mask = img_tensor.ne(0.0)
+    desired = img_tensor[mask]
+    mean_val, std_val = desired.mean(), desired.std()
