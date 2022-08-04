@@ -137,3 +137,10 @@ class Gleason2019SaveDISK(Dataset):
     def _generate_samples(self, sample_img_path, sample_seg_path):
         total = len(self.list_imgs)
         print('Total ' + self.mode + ' data to generate samples:', total)
+        for j in range(total):
+            for i in range(self.samples):
+                input_path = self.list_imgs[j]
+                label_path = self.list_labels[j]
+
+                img_numpy = imageio.imread(input_path)
+                label_numpy = imageio.imread(label_path)
