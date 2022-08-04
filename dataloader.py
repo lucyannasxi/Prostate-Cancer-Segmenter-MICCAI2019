@@ -150,3 +150,10 @@ class Gleason2019SaveDISK(Dataset):
                 img_tensor = torch.from_numpy(img_numpy).float()
                 label_tensor = torch.from_numpy(label_numpy).unsqueeze(0)
                 img_tensor = img_tensor.permute(2, 0, 1)
+                img_tensor = norm_img(img_tensor)
+
+                img_name = f"{self.mode}_img_{str(j).zfill(3)}_sample_{str(i).zfill(3)}.npy"
+                out_img_file = os.path.join(sample_img_path, img_name)
+
+                seg_name = f"{self.mode}_seg_{str(j).zfill(3)}_sample_{str(i).zfill(3)}.npy"
+                out_seg_file = os.path.join(sample_seg_path, seg_name)
