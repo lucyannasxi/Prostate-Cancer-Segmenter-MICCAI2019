@@ -144,3 +144,9 @@ class Gleason2019SaveDISK(Dataset):
 
                 img_numpy = imageio.imread(input_path)
                 label_numpy = imageio.imread(label_path)
+
+                img_numpy, label_numpy = self.crop_img(img_numpy, label_numpy)
+
+                img_tensor = torch.from_numpy(img_numpy).float()
+                label_tensor = torch.from_numpy(label_numpy).unsqueeze(0)
+                img_tensor = img_tensor.permute(2, 0, 1)
