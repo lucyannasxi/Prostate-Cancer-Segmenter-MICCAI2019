@@ -130,3 +130,10 @@ class Gleason2019SaveDISK(Dataset):
 
     def __getitem__(self, index):
         out_img_file, out_seg_file = self.sample_list[index]
+        img_tensor = torch.from_numpy(np.load(out_img_file))
+        segmentation_map = torch.from_numpy(np.load(out_seg_file))
+        return img_tensor, segmentation_map
+
+    def _generate_samples(self, sample_img_path, sample_seg_path):
+        total = len(self.list_imgs)
+        print('Total ' + self.mode + ' data to generate samples:', total)
