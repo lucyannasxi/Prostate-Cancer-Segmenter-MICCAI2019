@@ -157,3 +157,14 @@ class Gleason2019SaveDISK(Dataset):
 
                 seg_name = f"{self.mode}_seg_{str(j).zfill(3)}_sample_{str(i).zfill(3)}.npy"
                 out_seg_file = os.path.join(sample_seg_path, seg_name)
+
+                np.save(out_img_file, img_tensor.numpy())
+                np.save(out_seg_file, label_tensor.numpy())
+                self.sample_list.append(tuple((out_img_file, out_seg_file)))
+        # save
+        with open(f'sub_img_paths_{self.mode}', 'wb') as fp:
+            pickle.dump(self.sample_list, fp)
+
+    def load_paths(self, ):
+        with open(f'sub_img_paths_{self.mode}', 'rb') as fp:
+            self.sample_list = pickle.load(fp)
