@@ -191,3 +191,5 @@ def norm_img(img_tensor):
     mask = img_tensor.ne(0.0)
     desired = img_tensor[mask]
     mean_val, std_val = desired.mean(), desired.std()
+    img_tensor = (img_tensor - mean_val) / std_val
+    return img_tensor
