@@ -6,4 +6,4 @@ path_to_save_labels = './labels'
 make_dirs(path_to_save_labels)
 
 # Read paths from 6 annotators
-maps = read_la
+maps = read_labels(root_pat
