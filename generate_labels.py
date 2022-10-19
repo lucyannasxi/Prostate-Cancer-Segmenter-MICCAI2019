@@ -7,4 +7,4 @@ make_dirs(path_to_save_labels)
 
 # Read paths from 6 annotators
 maps = read_labels(root_path)
-img_paths = sorted(glob.glob(os.path.join(root_
+img_paths = sorted(glob.glob(os.path.join(root_path,'Tr
