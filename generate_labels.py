@@ -10,4 +10,4 @@ maps = read_labels(root_path)
 img_paths = sorted(glob.glob(os.path.join(root_path,'Train Imgs/Train Imgs/*')))
 print('Imgs found:', len(img_paths))
 assert len(img_paths)==244 , 'Check your path'
-#
+# Majority 
