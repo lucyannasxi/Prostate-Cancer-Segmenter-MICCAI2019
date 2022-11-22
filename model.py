@@ -6,4 +6,4 @@ import torch.nn.functional as F
 from utils import DiceLoss
 
 
-# 2D-Unet Mode
+# 2D-Unet Model is adapte
