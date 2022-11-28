@@ -6,4 +6,4 @@ import torch.nn.functional as F
 from utils import DiceLoss
 
 
-# 2D-Unet Model is adapted from https://github.com/milesia
+# 2D-Unet Model is adapted from https://github.com/milesial/Pytorc
