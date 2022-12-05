@@ -7,4 +7,4 @@ from utils import DiceLoss
 
 
 # 2D-Unet Model is adapted from https://github.com/milesial/Pytorch-UNet/blob/master/unet/unet_model.py
-class DoubleConv(nn.Mod
+class DoubleConv(nn.Module):
