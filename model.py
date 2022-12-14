@@ -10,3 +10,4 @@ from utils import DiceLoss
 class DoubleConv(nn.Module):
     '''(conv => BN => ReLU) * 2'''
 
+    def __init_
