@@ -11,4 +11,5 @@ class DoubleConv(nn.Module):
     '''(conv => BN => ReLU) * 2'''
 
     def __init__(self, in_ch, out_ch):
-        super(DoubleConv, self).__init__(
+        super(DoubleConv, self).__init__()
+     
