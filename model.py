@@ -12,4 +12,4 @@ class DoubleConv(nn.Module):
 
     def __init__(self, in_ch, out_ch):
         super(DoubleConv, self).__init__()
-        self.conv = nn.Sequ
+        self.conv = nn.Sequential(
