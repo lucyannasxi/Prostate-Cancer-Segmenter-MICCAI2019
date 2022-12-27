@@ -13,4 +13,4 @@ class DoubleConv(nn.Module):
     def __init__(self, in_ch, out_ch):
         super(DoubleConv, self).__init__()
         self.conv = nn.Sequential(
-            nn.Conv2d(in_ch, ou
+            nn.Conv2d(in_ch, out_ch, 3, p
