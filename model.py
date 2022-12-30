@@ -14,4 +14,4 @@ class DoubleConv(nn.Module):
         super(DoubleConv, self).__init__()
         self.conv = nn.Sequential(
             nn.Conv2d(in_ch, out_ch, 3, padding=1),
-            n
+            nn.BatchNo
