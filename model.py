@@ -20,4 +20,4 @@ class DoubleConv(nn.Module):
             nn.BatchNorm2d(out_ch),
             nn.ReLU(inplace=True))
 
-   
+    def forward
