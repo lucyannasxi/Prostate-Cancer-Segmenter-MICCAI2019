@@ -25,4 +25,5 @@ class DoubleConv(nn.Module):
         return x
 
 
-class InConv(nn.Mo
+class InConv(nn.Module):
+    
