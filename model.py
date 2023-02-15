@@ -26,4 +26,4 @@ class DoubleConv(nn.Module):
 
 
 class InConv(nn.Module):
-    def __init__(self
+    def __init__(self, in_ch
