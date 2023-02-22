@@ -28,4 +28,4 @@ class DoubleConv(nn.Module):
 class InConv(nn.Module):
     def __init__(self, in_ch, out_ch):
         super(InConv, self).__init__()
-        self.conv = D
+        self.conv = DoubleCon
