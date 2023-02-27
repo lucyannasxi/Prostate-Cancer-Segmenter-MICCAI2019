@@ -30,4 +30,5 @@ class InConv(nn.Module):
         super(InConv, self).__init__()
         self.conv = DoubleConv(in_ch, out_ch)
 
-    def forward(self, x)
+    def forward(self, x):
+        x = s
