@@ -31,4 +31,5 @@ class InConv(nn.Module):
         self.conv = DoubleConv(in_ch, out_ch)
 
     def forward(self, x):
-        x = self.
+        x = self.conv(x)
+       
