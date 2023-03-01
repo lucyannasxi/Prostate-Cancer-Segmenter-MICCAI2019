@@ -32,4 +32,7 @@ class InConv(nn.Module):
 
     def forward(self, x):
         x = self.conv(x)
-       
+        return x
+
+
+c
