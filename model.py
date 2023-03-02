@@ -35,4 +35,4 @@ class InConv(nn.Module):
         return x
 
 
-class Down
+class Down(nn.Module
