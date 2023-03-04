@@ -36,4 +36,4 @@ class InConv(nn.Module):
 
 
 class Down(nn.Module):
-    def __i
+    def __init__(s
