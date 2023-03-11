@@ -39,4 +39,4 @@ class Down(nn.Module):
     def __init__(self, in_ch, out_ch):
         super(Down, self).__init__()
         self.mpconv = nn.Sequential(
-    
+            nn.Max
