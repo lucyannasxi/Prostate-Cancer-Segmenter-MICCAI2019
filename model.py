@@ -40,4 +40,4 @@ class Down(nn.Module):
         super(Down, self).__init__()
         self.mpconv = nn.Sequential(
             nn.MaxPool2d(2),
-            Doubl
+            DoubleConv(in_ch
