@@ -42,4 +42,4 @@ class Down(nn.Module):
             nn.MaxPool2d(2),
             DoubleConv(in_ch, out_ch))
 
-    def forward(sel
+    def forward(self, x):
