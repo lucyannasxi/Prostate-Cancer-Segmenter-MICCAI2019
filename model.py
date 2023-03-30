@@ -43,4 +43,5 @@ class Down(nn.Module):
             DoubleConv(in_ch, out_ch))
 
     def forward(self, x):
-        x = self.mpconv(x
+        x = self.mpconv(x)
+        
