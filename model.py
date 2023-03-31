@@ -44,4 +44,7 @@ class Down(nn.Module):
 
     def forward(self, x):
         x = self.mpconv(x)
-        
+        return x
+
+
+clas
