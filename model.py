@@ -47,4 +47,5 @@ class Down(nn.Module):
         return x
 
 
-class Up(nn.Mo
+class Up(nn.Module):
+   
