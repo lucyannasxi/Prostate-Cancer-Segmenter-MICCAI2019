@@ -49,4 +49,4 @@ class Down(nn.Module):
 
 class Up(nn.Module):
     def __init__(self, in_ch, out_ch, bilinear=True):
-        
+        super(Up, self
