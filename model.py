@@ -52,4 +52,4 @@ class Up(nn.Module):
         super(Up, self).__init__()
 
         if bilinear:
-      
+            self
