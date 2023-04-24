@@ -52,4 +52,4 @@ class Up(nn.Module):
         super(Up, self).__init__()
 
         if bilinear:
-            self.up = nn.Upsample(sc
+            self.up = nn.Upsample(scale_fa
