@@ -52,4 +52,4 @@ class Up(nn.Module):
         super(Up, self).__init__()
 
         if bilinear:
-            self.up = nn.Upsample(scale_factor=2, mode='bilinear', ali
+            self.up = nn.Upsample(scale_factor=2, mode='bilinear', align_corners
