@@ -53,4 +53,5 @@ class Up(nn.Module):
 
         if bilinear:
             self.up = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
-     
+        else:
+ 
