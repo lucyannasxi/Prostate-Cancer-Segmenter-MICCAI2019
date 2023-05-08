@@ -54,4 +54,4 @@ class Up(nn.Module):
         if bilinear:
             self.up = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
         else:
-            self.up = nn.ConvTranspose2d(in_ch 
+            self.up = nn.ConvTranspose2d(in_ch // 2, in_c
