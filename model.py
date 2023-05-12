@@ -56,4 +56,6 @@ class Up(nn.Module):
         else:
             self.up = nn.ConvTranspose2d(in_ch // 2, in_ch // 2, 2, stride=2)
 
-        self.conv = DoubleConv(in_ch, ou
+        self.conv = DoubleConv(in_ch, out_ch)
+
+    def 
