@@ -58,4 +58,5 @@ class Up(nn.Module):
 
         self.conv = DoubleConv(in_ch, out_ch)
 
-    def forward(self, x1
+    def forward(self, x1, x2):
+        x1 =
