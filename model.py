@@ -62,4 +62,4 @@ class Up(nn.Module):
         x1 = self.up(x1)
 
         diffY = x2.size()[2] - x1.size()[2]
-        di
+        diffX = x2.
