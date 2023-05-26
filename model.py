@@ -64,4 +64,4 @@ class Up(nn.Module):
         diffY = x2.size()[2] - x1.size()[2]
         diffX = x2.size()[3] - x1.size()[3]
 
-        x1 = F.pad(x1, (diffX // 2, d
+        x1 = F.pad(x1, (diffX // 2, diffX - d
