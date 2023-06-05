@@ -67,4 +67,4 @@ class Up(nn.Module):
         x1 = F.pad(x1, (diffX // 2, diffX - diffX // 2,
                         diffY // 2, diffY - diffY // 2))
         x = torch.cat([x2, x1], dim=1)
-      
+        x = self.conv(
