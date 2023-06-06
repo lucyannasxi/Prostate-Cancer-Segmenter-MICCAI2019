@@ -68,4 +68,7 @@ class Up(nn.Module):
                         diffY // 2, diffY - diffY // 2))
         x = torch.cat([x2, x1], dim=1)
         x = self.conv(x)
-        re
+        return x
+
+
+class 
