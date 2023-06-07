@@ -71,4 +71,4 @@ class Up(nn.Module):
         return x
 
 
-class OutConv(
+class OutConv(nn.Module
