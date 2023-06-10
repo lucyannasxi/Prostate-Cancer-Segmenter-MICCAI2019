@@ -71,4 +71,5 @@ class Up(nn.Module):
         return x
 
 
-class OutConv(nn.Module
+class OutConv(nn.Module):
+    def 
