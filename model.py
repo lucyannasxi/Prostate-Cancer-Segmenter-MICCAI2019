@@ -72,4 +72,4 @@ class Up(nn.Module):
 
 
 class OutConv(nn.Module):
-    def 
+    def __init__
