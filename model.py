@@ -73,4 +73,4 @@ class Up(nn.Module):
 
 class OutConv(nn.Module):
     def __init__(self, in_ch, out_ch):
-        super(OutCo
+        super(OutConv, self).__i
