@@ -77,4 +77,4 @@ class OutConv(nn.Module):
         self.conv = nn.Conv2d(in_ch, out_ch, 1)
 
     def forward(self, x):
-  
+        x =
