@@ -81,4 +81,5 @@ class OutConv(nn.Module):
         return x
 
 
-class Unet(pl.LightningM
+class Unet(pl.LightningModule):
+ 
