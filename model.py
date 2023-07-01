@@ -82,4 +82,4 @@ class OutConv(nn.Module):
 
 
 class Unet(pl.LightningModule):
- 
+    def 
