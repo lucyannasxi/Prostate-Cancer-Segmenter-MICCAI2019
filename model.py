@@ -83,4 +83,5 @@ class OutConv(nn.Module):
 
 class Unet(pl.LightningModule):
     def __init__(self, n_channels, n_classes):
-        super(Unet, self).__in
+        super(Unet, self).__init__()
+    
