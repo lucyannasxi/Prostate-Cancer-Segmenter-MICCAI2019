@@ -86,4 +86,5 @@ class Unet(pl.LightningModule):
         super(Unet, self).__init__()
         self.criterion = DiceLoss()
         self.inc = InConv(n_channels, 64)
-        self.down1 = Down(64
+        self.down1 = Down(64, 128)
+ 
