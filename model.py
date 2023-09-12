@@ -92,4 +92,4 @@ class Unet(pl.LightningModule):
         self.down4 = Down(512, 512)
         self.up1 = Up(1024, 256)
         self.up2 = Up(512, 128)
-        self.u
+        self.up3 = Up(25
