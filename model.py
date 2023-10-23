@@ -96,3 +96,4 @@ class Unet(pl.LightningModule):
         self.up4 = Up(128, 64)
         self.outc = OutConv(64, n_classes)
 
+    def 
