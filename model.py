@@ -97,4 +97,4 @@ class Unet(pl.LightningModule):
         self.outc = OutConv(64, n_classes)
 
     def forward(self, x):
-        x1 = self
+        x1 = self.inc(x)
