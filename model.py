@@ -98,3 +98,4 @@ class Unet(pl.LightningModule):
 
     def forward(self, x):
         x1 = self.inc(x)
+       
