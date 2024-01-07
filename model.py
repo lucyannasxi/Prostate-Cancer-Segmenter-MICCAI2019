@@ -106,4 +106,4 @@ class Unet(pl.LightningModule):
         x = self.up2(x, x3)
         x = self.up3(x, x2)
         x = self.up4(x, x1)
-        x =
+        x = self.o
