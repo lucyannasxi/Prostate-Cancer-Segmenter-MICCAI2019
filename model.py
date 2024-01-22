@@ -108,3 +108,5 @@ class Unet(pl.LightningModule):
         x = self.up4(x, x1)
         x = self.outc(x)
         return x
+
+    def tr
