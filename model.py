@@ -109,4 +109,4 @@ class Unet(pl.LightningModule):
         x = self.outc(x)
         return x
 
-    def training_step(self, bat
+    def training_step(self, batch, 
