@@ -111,4 +111,4 @@ class Unet(pl.LightningModule):
 
     def training_step(self, batch, batch_idx):
         # training_step defined the train loop.
-       
+        input_te
