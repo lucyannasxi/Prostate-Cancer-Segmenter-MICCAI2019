@@ -112,4 +112,4 @@ class Unet(pl.LightningModule):
     def training_step(self, batch, batch_idx):
         # training_step defined the train loop.
         input_tensor, target = batch
-        logits = self.forward(input_
+        logits = self.forward(input_tensor) 
