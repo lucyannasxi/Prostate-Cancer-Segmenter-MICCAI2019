@@ -113,4 +113,4 @@ class Unet(pl.LightningModule):
         # training_step defined the train loop.
         input_tensor, target = batch
         logits = self.forward(input_tensor)  # unnormalized
-        l
+        loss = 
