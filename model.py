@@ -114,4 +114,5 @@ class Unet(pl.LightningModule):
         input_tensor, target = batch
         logits = self.forward(input_tensor)  # unnormalized
         loss = self.criterion(logits, target)
-        # Logging to TensorBoard by defau
+        # Logging to TensorBoard by default
+      
