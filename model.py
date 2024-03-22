@@ -116,4 +116,5 @@ class Unet(pl.LightningModule):
         loss = self.criterion(logits, target)
         # Logging to TensorBoard by default
         self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
-        retur
+        return loss
+
