@@ -119,4 +119,4 @@ class Unet(pl.LightningModule):
         return loss
 
     def validation_step(self, val_batch, batch_idx):
-   
+        input_tenso
