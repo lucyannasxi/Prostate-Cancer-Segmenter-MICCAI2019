@@ -118,4 +118,4 @@ class Unet(pl.LightningModule):
         self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
         return loss
 
-    def validation_step(s
+    def validation_step(self, val
