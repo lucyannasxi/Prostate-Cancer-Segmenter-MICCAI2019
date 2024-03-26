@@ -120,4 +120,5 @@ class Unet(pl.LightningModule):
 
     def validation_step(self, val_batch, batch_idx):
         input_tensor, target = val_batch
-        logits = self.forward(input_tensor)  # unnormalize
+        logits = self.forward(input_tensor)  # unnormalized
+        l
