@@ -122,4 +122,4 @@ class Unet(pl.LightningModule):
         input_tensor, target = val_batch
         logits = self.forward(input_tensor)  # unnormalized
         loss = self.criterion(logits, target)
-        self.log('val_loss', loss, on_step=True, on_epoch=True, prog_bar=True, l
+        self.log('val_loss', loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
