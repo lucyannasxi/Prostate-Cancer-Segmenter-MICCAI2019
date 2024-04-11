@@ -125,4 +125,4 @@ class Unet(pl.LightningModule):
         self.log('val_loss', loss, on_step=True, on_epoch=True, prog_bar=True, logger=True)
         return loss
 
-    def configure_
+    def configure_optimizers(se
