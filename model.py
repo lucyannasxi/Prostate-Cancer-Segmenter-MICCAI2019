@@ -126,4 +126,4 @@ class Unet(pl.LightningModule):
         return loss
 
     def configure_optimizers(self):
-        optimizer
+        optimizer = torch.opt
