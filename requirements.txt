@@ -1,2 +1,3 @@
 torch
-image
+imageio
+pytorch
