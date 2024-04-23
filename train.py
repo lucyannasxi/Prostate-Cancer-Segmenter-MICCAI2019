@@ -28,3 +28,12 @@ train_loader = Gleason2019SaveDISK('train', train_imgs, labels_final, (0.8, 0.2)
 if generate_sub_images:
     val_loader.generate_data(folder_to_save_val_samples)
     train_loader.generate_data(folder_to_save_train_samples)
+else:
+    print('You have to generate the image samples once')
+    train_loader.load_paths()
+    val_loader.load_paths()
+
+# Let pytorch lightning handle the training process
+in_channels = 3
+classes = 7
+train_dl = DataLoader(train_loader, batch_size=4, num_workers=8)
