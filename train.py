@@ -37,3 +37,7 @@ else:
 in_channels = 3
 classes = 7
 train_dl = DataLoader(train_loader, batch_size=4, num_workers=8)
+val_dl = DataLoader(val_loader, batch_size=4, num_workers=8)
+model = Unet(in_channels, classes)
+trainer = Trainer(gpus=1, progress_bar_refresh_rate=50, max_epochs=50)
+trainer.fit(model, train_dl, val_dl)
