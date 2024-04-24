@@ -18,3 +18,17 @@ def make_dirs(path):
         os.mkdir(path)
     else:
         os.makedirs(path)
+
+
+def read_img(img_path):
+    """
+    Reads a .png image and returns it as a numpy array.
+    """
+    return imageio.imread(img_path)
+
+
+def check_path_in_list(key, list):
+    """
+    Checks a path if exist in the other list
+    """
+    # remove file.png from the end of the path
