@@ -32,3 +32,18 @@ def check_path_in_list(key, list):
     Checks a path if exist in the other list
     """
     # remove file.png from the end of the path
+    path_base = list[0].split('/')[0:-1]
+    # add desired key-path
+    path_base.append(key)
+    desired_path = '/'.join(path_base)
+    # check if it exists in the list
+    if desired_path in list:
+        image_numpy = read_img(desired_path)
+        return image_numpy
+    return None
+
+
+def get_majority_vote(a):
+    """
+    Returns the majority vote element of a list
+    """
