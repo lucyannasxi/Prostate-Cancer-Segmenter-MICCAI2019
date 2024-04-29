@@ -47,3 +47,16 @@ def get_majority_vote(a):
     """
     Returns the majority vote element of a list
     """
+    return max(map(lambda val: (a.count(val), val), set(a)))[1]
+
+
+def vote(stacked_labels):
+    """
+    Performs majority voting on the stacked labels
+    """
+    voters, height, width = stacked_labels.shape
+    final_labels = stacked_labels.sum(axis=0)
+    for i in range(height):
+        for j in range(width):
+            votes = stacked_labels[:, i, j]
+            value = get_majority_vote(votes.tolist())
