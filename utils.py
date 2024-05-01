@@ -60,3 +60,10 @@ def vote(stacked_labels):
         for j in range(width):
             votes = stacked_labels[:, i, j]
             value = get_majority_vote(votes.tolist())
+            final_labels[i, j] = value
+    return final_labels
+
+
+def preprocess_labels(maps, image_paths, path_to_save_labels):
+    """
+    Majority labeling vote to produce ground truth labels
