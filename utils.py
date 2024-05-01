@@ -67,3 +67,17 @@ def vote(stacked_labels):
 def preprocess_labels(maps, image_paths, path_to_save_labels):
     """
     Majority labeling vote to produce ground truth labels
+    """
+    label_list = []
+
+    for j in range(len(image_paths)):
+        start = time.time()
+
+        path = image_paths[j]  # we use the train images as a reference annotation
+
+        # find slice and core num from the train images
+        keyname = path.split('/')[-1].split('.jpg')[0]
+        # add slice name
+        key = keyname + '_classimg_nonconvex.png'
+
+        seg_list = []
