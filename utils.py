@@ -94,3 +94,13 @@ def preprocess_labels(maps, image_paths, path_to_save_labels):
 
 
 def read_labels(root_path):
+    """
+    Reads labels and returns them in a tuple of sorted lists
+    """
+    map_1 = sorted(glob.glob(root_path + 'Maps1_T/Maps1_T/*.png'))
+    map_2 = sorted(glob.glob(root_path + 'Maps2_T/Maps2_T/*.png'))
+    map_3 = sorted(glob.glob(root_path + 'Maps3_T/Maps3_T/*.png'))
+    map_4 = sorted(glob.glob(root_path + 'Maps4_T/Maps4_T/*.png'))
+    map_5 = sorted(glob.glob(root_path + 'Maps5_T/Maps5_T/*.png'))
+    map_6 = sorted(glob.glob(root_path + 'Maps6_T/Maps6_T/*.png'))
+    return [map_1, map_2, map_3, map_4, map_5, map_6]
