@@ -81,3 +81,16 @@ def preprocess_labels(maps, image_paths, path_to_save_labels):
         key = keyname + '_classimg_nonconvex.png'
 
         seg_list = []
+        for annot in maps:
+            # Check if the annotator has annotated the current image
+            image_seg = check_path_in_list(key, annot)
+            if image_seg is not None:
+                seg_list.append(image_seg)
+
+        stacked_labels = np.stack(seg_list, axis=0)
+        label = vote(stacked_labels)
+        imageio.imwrite(os.path.join(path_to_save_labels, key), label.astype('uint8'))
+        print('ID:', keyname, '|| Time per img', time.time() - start, 'sec || annotators:', len(seg_list))
+
+
+def read_labels(root_path):
