@@ -104,3 +104,18 @@ def read_labels(root_path):
     map_5 = sorted(glob.glob(root_path + 'Maps5_T/Maps5_T/*.png'))
     map_6 = sorted(glob.glob(root_path + 'Maps6_T/Maps6_T/*.png'))
     return [map_1, map_2, map_3, map_4, map_5, map_6]
+
+
+def shuffle_lists(a, b):
+    c = list(zip(a, b))
+    random.shuffle(c)
+    a, b = zip(*c)
+    return a, b
+
+
+class DiceLoss(nn.Module):
+    def __init__(self) -> None:
+        super(DiceLoss, self).__init__()
+        self.eps = 1e-6
+
+    def forward(self, input, target):
