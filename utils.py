@@ -119,3 +119,13 @@ class DiceLoss(nn.Module):
         self.eps = 1e-6
 
     def forward(self, input, target):
+        input_soft = F.softmax(input, dim=1)
+        num_classes = input.shape[1]
+        # create the labels one hot tensor
+        target_one_hot = make_one_hot(target.type(torch.int64), num_classes).cuda()
+        # compute the actual dice score
+        dims = (1, 2, 3)
+        intersection = torch.sum(input_soft * target_one_hot, dims)
+        cardinality = torch.sum(input_soft + target_one_hot, dims)
+        dice_score = 2. * intersection / (cardinality + self.eps)
+        return torch.mean(1. - dice_score)
