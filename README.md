@@ -19,3 +19,14 @@ The folder is named 'MICCAI_2019_pathology_challenge'
 
 Read annotations and offline processing
 This step generates training labels through majority voting for the provided annotations.
+Check path names in the `generate_labels.py` script and then run `python generate_labels.py`. It roughly takes 2 hours.
+
+## Baseline Experiment
+After checking the paths, run `python train.py`.
+
+This baseline approach includes: Majority label Voting from different domain experts, Random shuffling 80% train 20% val split, 512x512x3 input patches, Unet architecture, Generate 30 samples per train image and 10 per val img, Train with Unet without data augmentation, Multi class dice loss functions will be used.
+
+After the baseline experiment further ideas/practices can be tested:
+
+Split the dataset based on slice number and ID and not randomly!
+Apply common data augmentation techniques
