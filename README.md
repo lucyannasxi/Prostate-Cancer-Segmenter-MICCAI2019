@@ -16,3 +16,6 @@ Clone the LucentAI project, create a new virtual environment, and then run `pip 
 ## The Data
 After downloading the data, place them in the project folder.
 The folder is named 'MICCAI_2019_pathology_challenge'
+
+Read annotations and offline processing
+This step generates training labels through majority voting for the provided annotations.
