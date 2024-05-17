@@ -30,3 +30,11 @@ After the baseline experiment further ideas/practices can be tested:
 
 Split the dataset based on slice number and ID and not randomly!
 Apply common data augmentation techniques
+Examine input down-sampling option
+Use more recent model architectures and compare them to the baseline
+
+## Medical Zoo Pytorch
+For medical imaging projects, visit [Medical Zoo Pytorch](https://github.com/black0017/MedicalZooPytorch 'MedZoo').
+
+## Support
+If you find this repo useful, consider starring it to help reach a broader audience.
